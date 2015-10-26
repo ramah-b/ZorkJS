@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text\css" href="zork.css" />
+<script>
+	function Zork() {
+	
+		move = document.getElementById("command").value;
+		document.getElementById("command").value = "";
+		room = document.getElementById("room").innerHTML;
+
+		north = "n";
+		south = "s";
+		west = "w";
+		east = "e";
+		
+		document.getElementById("message").innerHTML = "<b>You said: " + move
+				+ "</b>"
+				 if (move == "q"){
+					document.getElementById("ripImage").style.visibility = "visible";
+					moves = document.getElementById("moves").value;
+					moves = moves + "Game Over!!";
+					document.getElementById("moves").innerHTML = moves;
+				}else 
+				if (room == "foyer"){
+					if (move == north){
+						document.getElementById("foyer").style.backgroundColor = "#6666FF";
+						document.getElementById("foyer").innerHTML = "Foyer";
+						document.getElementById("foyer").style.color = "#FFFFFF";
+						moves = document.getElementById("moves").value;
+						moves = moves + "You are in " + room +".";
+						moves = moves + "\nYou moved North.\n";
+						document.getElementById("moves").innerHTML = moves;
+						
+						document.getElementById("room").innerHTML = "frontroom";
+						
+					}else{
+						moves = document.getElementById("moves").value;
+						moves = moves + "There is no door.\n";
+						document.getElementById("moves").innerHTML = moves;
+						
+					}
+					}else if (room == "frontroom"){
+						if (move == east){
+							document.getElementById("frontroom").style.backgroundColor = "#6666FF";
+							document.getElementById("frontroom").innerHTML = "Front Room";
+							document.getElementById("frontroom").style.color = "#FFFFFF";
+
+							moves = document.getElementById("moves").value;
+							moves = moves + "You are in " + room +".";
+							moves = moves + "\nYou moved East.\n";
+							document.getElementById("moves").innerHTML = moves;
+							
+							document.getElementById("room").innerHTML = "kitchen";
+							
+						}else if (move == west){
+							document.getElementById("frontroom").style.backgroundColor = "#6666FF";
+							document.getElementById("frontroom").innerHTML = "Front Room";
+							document.getElementById("frontroom").style.color = "#FFFFFF";
+
+							moves = document.getElementById("moves").value;
+							moves = moves + "You are in " + room +".";
+							moves = moves + "\nYou moved West.\n";
+							document.getElementById("moves").innerHTML = moves;
+							
+							document.getElementById("room").innerHTML = "library";
+							
+						}else if (move == south){
+							document.getElementById("frontroom").style.backgroundColor = "#6666FF";
+							document.getElementById("frontroom").innerHTML = "Front Room";
+							document.getElementById("frontroom").style.color = "#FFFFFF";
+
+							moves = document.getElementById("moves").value;
+							moves = moves + "You are in " + room +".";
+							moves = moves + "\nYou moved South.\n";
+							document.getElementById("moves").innerHTML = moves;
+							
+							document.getElementById("room").innerHTML = "foyer";
+							
+						}else{
+							moves = document.getElementById("moves").value;
+							moves = moves + "There is no door.\n";
+							document.getElementById("moves").innerHTML = moves
+						}
+						}else if (room == "library"){
+							if (move == east){
+								document.getElementById("library").style.backgroundColor = "#6666FF";
+								document.getElementById("library").innerHTML = "Library";
+								document.getElementById("library").style.color = "#FFFFFF";
+								
+								moves = document.getElementById("moves").value;
+								moves = moves + "You are in " + room +".";
+								moves = moves + "\nYou moved East.\n";
+								document.getElementById("moves").innerHTML = moves;
+								
+								document.getElementById("room").innerHTML = "frontroom";
+								
+							}else if (move == north){
+								document.getElementById("library").style.backgroundColor = "#6666FF";
+								document.getElementById("library").innerHTML = "Library";
+								document.getElementById("library").style.color = "#FFFFFF";
+
+								moves = document.getElementById("moves").value;
+								moves = moves + "You are in " + room +".";
+								moves = moves + "\nYou moved North.\n";
+								document.getElementById("moves").innerHTML = moves;
+								
+								document.getElementById("room").innerHTML = "parlor";
+								
+							}else {
+								moves = document.getElementById("moves").value;
+								moves = moves + "There is no door.\n";
+								document.getElementById("moves").innerHTML = moves
+								
+							}
+							}else if (room == "kitchen"){
+								if (move == east){
+									document.getElementById("kitchen").style.backgroundColor = "#6666FF";
+									document.getElementById("kitchen").innerHTML = "Kitchen";
+									document.getElementById("kitchen").style.color = "#FFFFFF";
+									
+									moves = document.getElementById("moves").value;
+									moves = moves + "You are in " + room +".";
+									moves = moves + "\nYou moved East.\n";
+									document.getElementById("moves").innerHTML = moves;
+									
+									document.getElementById("room").innerHTML = "frontroom";
+									
+								}else if (move == north){
+									document.getElementById("kitchen").style.backgroundColor = "#6666FF";
+									document.getElementById("kitchen").innerHTML = "Kitchen";
+									document.getElementById("kitchen").style.color = "#FFFFFF";
+									
+									moves = document.getElementById("moves").value;
+									moves = moves + "You are in " + room +".";
+									moves = moves + "\nYou moved North.\n";
+									document.getElementById("moves").innerHTML = moves;
+									
+									document.getElementById("room").innerHTML = "diningroom";
+									
+								}else{
+									moves = document.getElementById("moves").value;
+									moves = moves + "There is no door.\n";
+									document.getElementById("moves").innerHTML = moves
+									}
+								}else if (room == "diningroom"){
+									if (move == south){
+										document.getElementById("diningroom").style.backgroundColor = "#6666FF";
+										document.getElementById("diningroom").innerHTML = "Dining Room";
+										document.getElementById("diningroom").style.color = "#FFFFFF";
+										
+										moves = document.getElementById("moves").value;
+										moves = moves + "You are in " + room +".";
+										moves = moves + "\nYou moved South.\n";
+										document.getElementById("moves").innerHTML = moves;
+										
+										document.getElementById("room").innerHTML = "kitchen";
+										
+									}else{
+										moves = document.getElementById("moves").value;
+										moves = moves + "There is no door.\n";
+										document.getElementById("moves").innerHTML = moves
+									}
+								}else if (room == "vault"){
+									if (move == west){
+										document.getElementById("vault").style.backgroundColor = "#6666FF";
+										document.getElementById("vault").innerHTML = "Vault";
+										document.getElementById("vault").style.color = "#FFFFFF";
+										
+										moves = document.getElementById("moves").value;
+										moves = moves + "You are in " + room +".";
+										moves = moves + "\nYou moved West.\n";
+										document.getElementById("moves").innerHTML = moves;
+										
+										document.getElementById("room").innerHTML = "parlor";
+										
+									}else{
+										moves = document.getElementById("moves").value;
+										moves = moves + "There is no door.\n";
+										document.getElementById("moves").innerHTML = moves
+									}
+								}else if (room == "parlor"){
+									if (move == east){
+										document.getElementById("parlor").style.backgroundColor = "#6666FF";
+										document.getElementById("parlor").innerHTML = "Parlor";
+										document.getElementById("parlor").style.color = "#FFFFFF";
+										
+										moves = document.getElementById("moves").value;
+										moves = moves + "You are in " + room +".";
+										moves = moves + "\nYou moved East.\n";
+										document.getElementById("moves").innerHTML = moves;
+										
+										document.getElementById("room").innerHTML = "vault";
+										
+									}else if (move == south){
+										document.getElementById("parlor").style.backgroundColor = "#6666FF";
+										document.getElementById("parlor").innerHTML = "Parlor";
+										document.getElementById("parlor").style.color = "#FFFFFF";
+										
+										moves = document.getElementById("moves").value;
+										moves = moves + "You are in " + room +".";
+										moves = moves + "\nYou moved South.\n";
+										document.getElementById("moves").innerHTML = moves;
+										
+										document.getElementById("room").innerHTML = "library";
+										
+									}
+										
+									else{
+										moves = document.getElementById("moves").value;
+										moves = moves + "There is no door.\n";
+										document.getElementById("moves").innerHTML = moves
+									}
+								}
+				
+						
+			
+	}
+</script>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Welcome to Zork</h1>
+	<div style="align: center">
+			<table border="1" style="width: 400px" class=>
+				<tr>
+					<td border="1" id="parlor">&nbsp;</td>
+					<td border="1" id="vault">&nbsp;</td>
+					<td border="1" id="diningRoom">&nbsp;</td>
+				</tr>
+				<tr>
+					<td border="1" id="library">&nbsp;</td>
+					<td border="1" id="frontroom">&nbsp;</td>
+					<td border="1" id="kitchen">&nbsp;</td>
+				</tr>
+				<tr>
+					<td border="1" bgcolor="black" id="null">&nbsp;</td>
+					<td border="1" id="foyer">&nbsp;</td>
+					<td border="1" bgcolor="black" id="null">&nbsp;</td>
+				</tr>
+			</table>
+			</div>
+	
+		<div id="room" style="color: #f5f5f5">foyer</div>
+		<div id="message"></div>
+		<form action="javascript:Zork();">
+			<input type="text" name="command" id="command"></input> 
+			<input type="submit" class="button-blue" id="submit" name="submit">
+			<img
+				id ="ripImage" src="http://images.clipartpanda.com/death-clipart-tombstone-clipart.gif"
+				alt="Game over. Dude." height="50" style= "visibility: hidden"></img>
+		</form>
+		<h2>your moves:</h2>
+		<textarea id="moves" rows="6" cols="50">
+</textarea>
+	</div>
+</body>
+</html>

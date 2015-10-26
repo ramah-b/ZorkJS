@@ -25,14 +25,14 @@
 				if (room == "foyer"){
 					if (move == north){
 						document.getElementById("foyer").style.backgroundColor = "#6666FF";
-						document.getElementById("foyer").innerHTML = "Foyer";
-						document.getElementById("foyer").style.color = "#FFFFFF";
+						
 						moves = document.getElementById("moves").value;
-						moves = moves + "You are in " + room +".";
-						moves = moves + "\nYou moved North.\n";
+						moves = moves + "You moved North.\n";
+						moves = moves + "You can move West, East, or South. (Q for quit).\n"
 						document.getElementById("moves").innerHTML = moves;
 						
 						document.getElementById("room").innerHTML = "frontroom";
+						document.getElementById("message").innerHTML = "<b>You are in the front room."+ "</b>"
 						
 					}else{
 						moves = document.getElementById("moves").value;
@@ -43,69 +43,65 @@
 					}else if (room == "frontroom"){
 						if (move == east){
 							document.getElementById("frontroom").style.backgroundColor = "#6666FF";
-							document.getElementById("frontroom").innerHTML = "Front Room";
-							document.getElementById("frontroom").style.color = "#FFFFFF";
 
 							moves = document.getElementById("moves").value;
-							moves = moves + "You are in " + room +".";
-							moves = moves + "\nYou moved East.\n";
+							moves = moves + "You moved East.\n";
+							moves = moves + "You can move West or North. (Q for quit).\n"
 							document.getElementById("moves").innerHTML = moves;
 							
 							document.getElementById("room").innerHTML = "kitchen";
+							document.getElementById("message").innerHTML = "<b>You are in the kitchen."+ "</b>"
 							
 						}else if (move == west){
 							document.getElementById("frontroom").style.backgroundColor = "#6666FF";
-							document.getElementById("frontroom").innerHTML = "Front Room";
-							document.getElementById("frontroom").style.color = "#FFFFFF";
 
 							moves = document.getElementById("moves").value;
-							moves = moves + "You are in " + room +".";
-							moves = moves + "\nYou moved West.\n";
+							moves = moves + "You moved West.\n";
+							moves = moves + "You can move East or North. (Q for quit).\n"
 							document.getElementById("moves").innerHTML = moves;
 							
 							document.getElementById("room").innerHTML = "library";
+							document.getElementById("message").innerHTML = "<b>You are in the library."+ "</b>"
 							
 						}else if (move == south){
 							document.getElementById("frontroom").style.backgroundColor = "#6666FF";
-							document.getElementById("frontroom").innerHTML = "Front Room";
-							document.getElementById("frontroom").style.color = "#FFFFFF";
 
 							moves = document.getElementById("moves").value;
-							moves = moves + "You are in " + room +".";
-							moves = moves + "\nYou moved South.\n";
+							moves = moves + "You moved South.\n";
 							document.getElementById("moves").innerHTML = moves;
+							moves = moves + "You can move North. (Q for quit).\n"
 							
 							document.getElementById("room").innerHTML = "foyer";
+							document.getElementById("message").innerHTML = "<b>You are in the foyer."+ "</b>"
 							
 						}else{
 							moves = document.getElementById("moves").value;
 							moves = moves + "There is no door.\n";
+							moves = moves + "You can move North. (Q for quit).\n";
 							document.getElementById("moves").innerHTML = moves
 						}
 						}else if (room == "library"){
 							if (move == east){
 								document.getElementById("library").style.backgroundColor = "#6666FF";
-								document.getElementById("library").innerHTML = "Library";
-								document.getElementById("library").style.color = "#FFFFFF";
 								
 								moves = document.getElementById("moves").value;
-								moves = moves + "You are in " + room +".";
-								moves = moves + "\nYou moved East.\n";
+								moves = moves + "You moved East.\n";
+								moves = moves + "You can move West, East, or South. (Q for quit).\n"
 								document.getElementById("moves").innerHTML = moves;
 								
 								document.getElementById("room").innerHTML = "frontroom";
+								document.getElementById("message").innerHTML = "<b>You are in the front room."+ "</b>"
 								
 							}else if (move == north){
 								document.getElementById("library").style.backgroundColor = "#6666FF";
-								document.getElementById("library").innerHTML = "Library";
-								document.getElementById("library").style.color = "#FFFFFF";
 
 								moves = document.getElementById("moves").value;
-								moves = moves + "You are in " + room +".";
-								moves = moves + "\nYou moved North.\n";
+								moves = moves + "You moved North.\n";
+								moves = moves + "You can move East, or South. (Q for quit).\n"
 								document.getElementById("moves").innerHTML = moves;
 								
 								document.getElementById("room").innerHTML = "parlor";
+								document.getElementById("message").innerHTML = "<b>You are in the parlor."+ "</b>"
 								
 							}else {
 								moves = document.getElementById("moves").value;
@@ -116,27 +112,25 @@
 							}else if (room == "kitchen"){
 								if (move == east){
 									document.getElementById("kitchen").style.backgroundColor = "#6666FF";
-									document.getElementById("kitchen").innerHTML = "Kitchen";
-									document.getElementById("kitchen").style.color = "#FFFFFF";
 									
 									moves = document.getElementById("moves").value;
-									moves = moves + "You are in " + room +".";
-									moves = moves + "\nYou moved East.\n";
+									moves = moves + "You moved East.\n";
+									moves = moves + "You can move West, East, or South. (Q for quit).\n";
 									document.getElementById("moves").innerHTML = moves;
 									
 									document.getElementById("room").innerHTML = "frontroom";
+									document.getElementById("message").innerHTML = "<b>You are in the front room."+ "</b>"
 									
 								}else if (move == north){
 									document.getElementById("kitchen").style.backgroundColor = "#6666FF";
-									document.getElementById("kitchen").innerHTML = "Kitchen";
-									document.getElementById("kitchen").style.color = "#FFFFFF";
 									
 									moves = document.getElementById("moves").value;
-									moves = moves + "You are in " + room +".";
-									moves = moves + "\nYou moved North.\n";
+									moves = moves + "You moved North.\n";
+									moves = moves + "You can move South. (Q for quit).\n";
 									document.getElementById("moves").innerHTML = moves;
 									
 									document.getElementById("room").innerHTML = "diningroom";
+									document.getElementById("message").innerHTML = "<b>You are in the dining room."+ "</b>"
 									
 								}else{
 									moves = document.getElementById("moves").value;
@@ -146,15 +140,15 @@
 								}else if (room == "diningroom"){
 									if (move == south){
 										document.getElementById("diningroom").style.backgroundColor = "#6666FF";
-										document.getElementById("diningroom").innerHTML = "Dining Room";
-										document.getElementById("diningroom").style.color = "#FFFFFF";
+
 										
 										moves = document.getElementById("moves").value;
-										moves = moves + "You are in " + room +".";
-										moves = moves + "\nYou moved South.\n";
+										moves = moves + "You moved South.\n";
+										moves = moves + "You can move North or West. (Q for quit).\n";
 										document.getElementById("moves").innerHTML = moves;
 										
 										document.getElementById("room").innerHTML = "kitchen";
+										document.getElementById("message").innerHTML = "<b>You are in the kitchen."+ "</b>"
 										
 									}else{
 										moves = document.getElementById("moves").value;
@@ -164,15 +158,14 @@
 								}else if (room == "vault"){
 									if (move == west){
 										document.getElementById("vault").style.backgroundColor = "#6666FF";
-										document.getElementById("vault").innerHTML = "Vault";
-										document.getElementById("vault").style.color = "#FFFFFF";
 										
 										moves = document.getElementById("moves").value;
-										moves = moves + "You are in " + room +".";
-										moves = moves + "\nYou moved West.\n";
+										moves = moves + "You moved West.\n";
+										moves = moves + "You can move South or East. (Q for quit).\n";
 										document.getElementById("moves").innerHTML = moves;
 										
 										document.getElementById("room").innerHTML = "parlor";
+										document.getElementById("message").innerHTML = "<b>You are in the parlor."+ "</b>"
 										
 									}else{
 										moves = document.getElementById("moves").value;
@@ -182,27 +175,26 @@
 								}else if (room == "parlor"){
 									if (move == east){
 										document.getElementById("parlor").style.backgroundColor = "#6666FF";
-										document.getElementById("parlor").innerHTML = "Parlor";
-										document.getElementById("parlor").style.color = "#FFFFFF";
 										
 										moves = document.getElementById("moves").value;
-										moves = moves + "You are in " + room +".";
-										moves = moves + "\nYou moved East.\n";
+										moves = moves + "You moved East.\n";
+										moves = moves + "You can move West. (Q for quit).\n";
 										document.getElementById("moves").innerHTML = moves;
 										
 										document.getElementById("room").innerHTML = "vault";
+										document.getElementById("message").innerHTML = "<b>You are in the vault."+ "</b>"
 										
 									}else if (move == south){
 										document.getElementById("parlor").style.backgroundColor = "#6666FF";
-										document.getElementById("parlor").innerHTML = "Parlor";
-										document.getElementById("parlor").style.color = "#FFFFFF";
+									
 										
 										moves = document.getElementById("moves").value;
-										moves = moves + "You are in " + room +".";
-										moves = moves + "\nYou moved South.\n";
+										moves = moves + "You moved South.\n";
+										moves = moves + "You can move East or North. (Q for quit).\n";
 										document.getElementById("moves").innerHTML = moves;
 										
 										document.getElementById("room").innerHTML = "library";
+										document.getElementById("message").innerHTML = "<b>You are in the library."+ "</b>"
 										
 									}
 										
@@ -222,7 +214,7 @@
 <body>
 	<div class="container">
 		<h1>Welcome to Zork</h1>
-	<div style="align: center">
+	<div class="t-container">
 			<table border="1" style="width: 400px" class=>
 				<tr>
 					<td border="1" id="parlor">&nbsp;</td>
@@ -243,7 +235,7 @@
 			</div>
 	
 		<div id="room" style="color: #f5f5f5">foyer</div>
-		<div id="message"></div>
+		<div id="message">You are in Foyer</div>
 		<form action="javascript:Zork();">
 			<input type="text" name="command" id="command"></input> 
 			<input type="submit" class="button-blue" id="submit" name="submit">
